@@ -16,7 +16,7 @@ class randomgenerate:
 
     def prime(n1=1,n2=100000):
         pr=randint(n1,n2)
-        while not (random.__is_prime__(pr)):
+        while not (randomgenerate.__is_prime__(pr)):
             pr=randint(n1,n2)
         return pr  
     
