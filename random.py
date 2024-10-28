@@ -27,4 +27,11 @@ class randomgenerate:
         while randomgenerate.__is_prime__(comp):
             comp=randint(1,10000)
         return comp
+    
     staticmethod(composite)
+
+    def  even(n1=1,n2=100000):
+        even=randint(n1,n2)
+        while even%2!=0:
+            even=randint(n1,n2)
+        return even
