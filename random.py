@@ -35,3 +35,13 @@ class randomgenerate:
         while even%2!=0:
             even=randint(n1,n2)
         return even
+    
+    staticmethod(even)
+
+    def odd(n1=1,n2=10000):
+        od=randint(n1,n2)
+        while od%2==0:
+            od =randint(n1,n2) 
+        return(od)
+    
+    staticmethod(odd)
