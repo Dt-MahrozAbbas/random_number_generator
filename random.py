@@ -1,5 +1,5 @@
  # type: ignore
-from random import *
+from random import randint
 class randomgenerate:   
     def __is_prime__(num):
         if num==2:
@@ -45,3 +45,13 @@ class randomgenerate:
         return(od)
     
     staticmethod(odd)
+
+
+r1=randomgenerate.even()          
+r2=randomgenerate.odd()          
+r3=randomgenerate.prime()          
+r4=randomgenerate.composite()
+print('even',r1)          
+print('odd',r2)          
+print('prime',r3)          
+print('comp',r4)  
