@@ -13,9 +13,18 @@ class randomgenerate:
                     return False
         return True  
     staticmethod(__is_prime__)
+
     def prime(n1=1,n2=100000):
         pr=randint(n1,n2)
         while not (random.__is_prime__(pr)):
             pr=randint(n1,n2)
         return pr  
+    
     staticmethod(prime) 
+
+    def composite(n1=1,n2=100000):
+        comp=randint(n1,n2)
+        while randomgenerate.__is_prime__(comp):
+            comp=randint(1,10000)
+        return comp
+    staticmethod(composite)
