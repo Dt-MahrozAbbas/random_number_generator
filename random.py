@@ -1,3 +1,4 @@
+ # type: ignore
 from random import *
 class randomgenerate:   
     def __is_prime__(num):
