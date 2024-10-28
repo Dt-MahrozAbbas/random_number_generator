@@ -16,8 +16,15 @@ class randomgenerate:
 
     def prime(n1=1,n2=100000):
         pr=randint(n1,n2)
-        while not (randomgenerate.__is_prime__(pr)):
+        flag=randomgenerate.__is_prime__(pr)
+        check_li=[pr]
+        while not flag:
             pr=randint(n1,n2)
+            flag=randomgenerate.__is_prime__(pr)
+            if pr not in check_li:
+                check_li.append(pr)
+            elif len(check_li)==abs(n2-n1)+1:
+                return "not exist in this range"    
         return pr  
     
     staticmethod(prime) 
