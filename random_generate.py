@@ -1,6 +1,7 @@
  # type: ignore
 from random import randint
 class randomgenerate:   
+    @staticmethod
     def __is_prime__(num):
         if num==2:
             return True
@@ -11,19 +12,17 @@ class randomgenerate:
             for i in range(3,ran,2):
                 if num%i==0:
                     return False
-        return True  
-    staticmethod(__is_prime__)
+            return True  
 
     def prime(n1=1,n2=100000):
         pr=randint(n1,n2)
         flag=randomgenerate.__is_prime__(pr)
-        check_li=[pr]
+        check_li={pr}
         while not flag:
             pr=randint(n1,n2)
             flag=randomgenerate.__is_prime__(pr)
-            if pr not in check_li:
-                check_li.append(pr)
-            elif len(check_li)==abs(n2-n1)+1:
+            check_li.add(pr)
+            if len(check_li)==abs(n2-n1)+1:
                 return "not exist in this range"    
         return pr  
     
@@ -37,26 +36,25 @@ class randomgenerate:
     
     staticmethod(composite)
 
+    @staticmethod
     def  even(n1=1,n2=100000):
         even=randint(n1,n2)
         while even%2!=0:
             even=randint(n1,n2)
         return even
     
-    staticmethod(even)
-
+    @staticmethod
     def odd(n1=1,n2=10000):
         od=randint(n1,n2)
         while od%2==0:
             od =randint(n1,n2) 
         return(od)
-    
-    staticmethod(odd)
+
 
 
 r1=randomgenerate.even()          
 r2=randomgenerate.odd()          
-r3=randomgenerate.prime()          
+r3=randomgenerate.prime(24,28)          
 r4=randomgenerate.composite()
 print('even',r1)          
 print('odd',r2)          
